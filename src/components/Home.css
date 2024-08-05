@@ -11,7 +11,7 @@
 .header h1{
     font-size: 50px;
     font-weight: 900;
-    color: chartreuse;
+    color: #ffe81f;
     font-family: "Abril Fatface", serif;
 }
 
@@ -51,7 +51,10 @@
     margin-top: 1rem;
 }
 
-.movie__content > h5{
-    margin-top: 0.5rem;
-    color: chartreuse;
+
+
+.more__info{
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #ffe81f; 
 }

@@ -1,25 +1,26 @@
-import React from "react";
-import useFetchData from "./utils/useFetchData";
-import "./Home.css";
+import React from 'react';
+import useFetchData from './utils/useFetchData';
+import { Link } from 'react-router-dom';
+import './Home.css';
 
-function Home() {
+const Home = () => {
   const moviesData = useFetchData();
-
+  
   return (
     <section className="home__container">
       <header className="header">
         <h1>STAR WARS</h1>
       </header>
       <section className="movie__container">
-        {moviesData.map((movies) => {
-          const { title, release_date, opening_crawl } = movies;
+        {moviesData.map((movie) => {
+          const { title, release_date, opening_crawl } = movie;
           return (
-            <section className="movie__content">
+            <section key={title} className="movie__content">
               <h1>{title}</h1>
               <h4>{release_date}</h4>
-              <p>{opening_crawl.substring(0, 260) + "..."}</p>
+              <p>{opening_crawl.substring(0, 260) + '...'}</p>
               <hr className="horizontal__line" />
-              <h5>More Info</h5>
+              <Link to="#" className="more__info">More Info</Link>
             </section>
           );
         })}
