@@ -5,11 +5,11 @@
     margin: 0;
     color: #ffffff;
     box-sizing: border-box;
+    background-color: black;
 }
 
 .app__container{
     width: 100%;
-    background-color: black;
     padding: 2rem 2rem;
     font-family: "Nanum Gothic", sans-serif;
 }
